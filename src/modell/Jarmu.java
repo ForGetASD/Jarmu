@@ -9,4 +9,11 @@ public abstract class Jarmu {
     public void leallit(){
     
     }
+    public boolean tankol(){
+        return true;
+    }
+    
+    public boolean halad(){
+        return true;
+    }
 }
