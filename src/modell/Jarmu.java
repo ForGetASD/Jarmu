@@ -1,19 +1,28 @@
 package modell;
 
 public abstract class Jarmu {
-    private boolean beinditva, uzemanyag, megerkezett;
+    private boolean beinditva = false, megerkezett = false;
+    private boolean uzemanyag = true;
     
     public void beindit(){
-    
+        this.beinditva = true;
     }
     public void leallit(){
-    
+        this.beinditva = false;
     }
     public boolean tankol(){
-        return true;
+        if (uzemanyag == false && beinditva == false) {
+            return true;
+        }
+        return false;
     }
     
     public boolean halad(){
-        return true;
+        if (beinditva == true && uzemanyag == true && megerkezett == false) {
+            this.uzemanyag = false;
+            this.beinditva = false;
+            return true;
+        }
+        return false;
     }
 }
