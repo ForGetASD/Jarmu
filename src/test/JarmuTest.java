@@ -23,12 +23,20 @@ public class JarmuTest {
         //2. teszteset: haladás úgy hogy a jármű már megérkezett.
         //haladasJarmuMikorMarMegerkezettTeszt();
         //3. teszteset: jármű tankolható.
-        jarmuTankolasTeszt();
+        //jarmuTankolasTeszt();
         //4. teszteset: jarmű tankolása beinditott állapotnál.
-        
+        jarmuTankolasBeinditottAllapotnalTeszt();
         //5. teszteset: jarmű tankolás után halad és meg is érkezik.
     }
-
+    private void jarmuTankolasBeinditottAllapotnalTeszt(){
+        Jarmuteszteleshez auto = new Jarmuteszteleshez();
+        auto.setUzemanyag(false);
+        auto.beindit();
+        boolean kapott = auto.tankol();
+        boolean vart = false;
+        assert kapott == vart : "autot meg lehetett tankolni beinditott állapotnál.";
+    }
+    
     private void jarmuTankolasTeszt(){
         Jarmuteszteleshez auto = new Jarmuteszteleshez();
         auto.setUzemanyag(false);
