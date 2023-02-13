@@ -37,5 +37,9 @@ public abstract class Jarmu {
     public boolean isBeinditva() {
         return beinditva;
     }
+
+    public boolean isMegerkezett() {
+        return megerkezett;
+    }
   
 }

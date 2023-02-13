@@ -12,10 +12,15 @@ public class JarmuTest {
 
     public JarmuTest() {
         //mintaSablonTest();
-        haladAutoBeinditasNelkulTeszt();
-        haladAutoBeinditassalTeszt();
+        //tanarur tesztjei
+        //haladAutoBeinditasNelkulTeszt();
+        //haladAutoBeinditassalTeszt();
+        //haladJarmuBeinditassalTeszt();
         
-        haladJarmuBeinditassalTeszt();
+        /*sajat tesztjeim*/
+        //1. teszteset: haladásnál a jármű megérkezik
+        haladJarmuBeinditassalMegerkezikTeszt();
+        
     }
 
     private void haladAutoBeinditasNelkulTeszt() {
@@ -39,6 +44,15 @@ public class JarmuTest {
         boolean kapott = auto.halad();
         boolean vart = true;
         assert kapott == vart : "nem halad";
+    }
+
+    private void haladJarmuBeinditassalMegerkezikTeszt() {
+        Jarmuteszteleshez auto = new Jarmuteszteleshez();
+        auto.beindit();
+        auto.halad();
+        boolean kapott = auto.isMegerkezett();
+        boolean vart = true;
+        assert kapott == vart : "haladásnál nem érkezett meg.";
     }
     
     private void mintaSablonTest() {
