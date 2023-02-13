@@ -12,6 +12,7 @@ public abstract class Jarmu {
     }
     public boolean tankol(){
         if (uzemanyag == false && beinditva == false) {
+            this.uzemanyag = true;
             return true;
         }
         return false;

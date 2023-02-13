@@ -12,8 +12,8 @@ public class Auto extends Jarmu{
     }
     @Override
     public boolean halad(){
-        Random rnd = new Random(4);
-        int defektSzam = rnd.nextInt();
+        Random rnd = new Random();
+        int defektSzam = rnd.nextInt(4);
         if (defektSzam == 1) {
             this.defekt = true;
             return false;
