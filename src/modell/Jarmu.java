@@ -35,16 +35,30 @@ public abstract class Jarmu {
         return false;
     }
 
-    public void setMegerkezett(boolean megerkezett) {
-        this.megerkezett = megerkezett;
-    }
-
     public boolean isBeinditva() {
         return beinditva;
+    }
+
+    public void setBeinditva(boolean beinditva) {
+        this.beinditva = beinditva;
     }
 
     public boolean isMegerkezett() {
         return megerkezett;
     }
+
+    public void setMegerkezett(boolean megerkezett) {
+        this.megerkezett = megerkezett;
+    }
+
+    public boolean isUzemanyag() {
+        return uzemanyag;
+    }
+
+    public void setUzemanyag(boolean uzemanyag) {
+        this.uzemanyag = uzemanyag;
+    }
+
+    
   
 }
