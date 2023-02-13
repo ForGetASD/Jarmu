@@ -1,8 +1,15 @@
 package modell;
 
 public abstract class Jarmu {
-    private boolean beinditva = false, megerkezett = false;
-    private boolean uzemanyag = true;
+
+    private boolean beinditva;
+    private boolean megerkezett, uzemanyag;
+
+    public Jarmu() {
+        this.beinditva = false;
+        this.megerkezett = false;
+        this.uzemanyag = true;
+    }
     
     public void beindit(){
         this.beinditva = true;
@@ -26,4 +33,9 @@ public abstract class Jarmu {
         }
         return false;
     }
+
+    public boolean isBeinditva() {
+        return beinditva;
+    }
+  
 }
