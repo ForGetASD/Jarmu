@@ -20,9 +20,19 @@ public class JarmuTest {
         /*sajat tesztjeim*/
         //1. teszteset: haladásnál a jármű megérkezik
         haladJarmuBeinditassalMegerkezikTeszt();
-        
+        //2. teszteset: haladás úgy hogy a jármű már megérkezett.
+        haladasJarmuMikorMarMegerkezettTeszt();
     }
 
+    private void haladasJarmuMikorMarMegerkezettTeszt(){
+        Jarmuteszteleshez auto = new Jarmuteszteleshez();
+        auto.beindit();
+        auto.setMegerkezett(true);
+        boolean kapott = auto.halad();
+        boolean vart = false;
+        assert kapott == vart : "jarmu halad, de hova azt nem tudom";
+    }
+    
     private void haladAutoBeinditasNelkulTeszt() {
         Auto auto = new Auto();
         boolean kapott = auto.halad();

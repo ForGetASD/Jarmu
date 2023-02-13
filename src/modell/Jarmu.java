@@ -35,6 +35,10 @@ public abstract class Jarmu {
         return false;
     }
 
+    public void setMegerkezett(boolean megerkezett) {
+        this.megerkezett = megerkezett;
+    }
+
     public boolean isBeinditva() {
         return beinditva;
     }
