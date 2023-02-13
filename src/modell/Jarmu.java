@@ -29,6 +29,7 @@ public abstract class Jarmu {
         if (beinditva == true && uzemanyag == true && megerkezett == false) {
             this.uzemanyag = false;
             this.beinditva = false;
+            this.megerkezett = true;
             return true;
         }
         return false;
